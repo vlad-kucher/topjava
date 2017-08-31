@@ -32,4 +32,6 @@ public class RootController {
         AuthorizedUser.setId(userId);
         return "redirect:meals";
     }
+
+
 }
