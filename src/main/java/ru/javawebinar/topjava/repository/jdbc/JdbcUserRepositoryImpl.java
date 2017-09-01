@@ -47,7 +47,6 @@ public class JdbcUserRepositoryImpl implements UserRepository {
         this.insertUser = new SimpleJdbcInsert(dataSource)
                 .withTableName("users")
                 .usingGeneratedKeyColumns("id");
-
         this.jdbcTemplate = jdbcTemplate;
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
     }
