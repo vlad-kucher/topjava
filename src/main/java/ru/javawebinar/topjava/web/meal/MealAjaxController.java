@@ -14,7 +14,8 @@ import javax.validation.Valid;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import java.util.StringJoiner;
+
+import static ru.javawebinar.topjava.util.ControllerUtil.getErrorResponseEntity;
 
 @RestController
 @RequestMapping(value = "/ajax/profile/meals")
@@ -35,16 +36,7 @@ public class MealAjaxController extends AbstractMealController {
     @PostMapping
     public ResponseEntity<String> createOrUpdate(@Valid MealTo mealTo, BindingResult result) {
         if (result.hasErrors()) {
-            StringJoiner joiner = new StringJoiner("<br>");
-            result.getFieldErrors().forEach(
-                    fe -> {
-                        String msg = fe.getDefaultMessage();
-                        if (!msg.startsWith(fe.getField())) {
-                            msg = fe.getField() + ' ' + msg;
-                        }
-                        joiner.add(msg);
-                    });
-            return new ResponseEntity<>(joiner.toString(), HttpStatus.UNPROCESSABLE_ENTITY);
+            return getErrorResponseEntity(result);
         }
         if (mealTo.isNew()) {
             super.create(MealsUtil.createNewFromTo(mealTo));
