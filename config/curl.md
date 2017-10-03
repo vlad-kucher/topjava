@@ -1,6 +1,7 @@
 ### Test MealRestController (application deployed in application context `topjava`).
 > For windows use `Git Bash`
 
+
 #### get All Users
 `curl -s http://localhost:8080/topjava/rest/admin/users --user admin@gmail.com:admin`
 
