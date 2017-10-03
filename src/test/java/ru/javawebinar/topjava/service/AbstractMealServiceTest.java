@@ -62,7 +62,7 @@ public abstract class AbstractMealServiceTest extends AbstractServiceTest {
     @Test
     public void testUpdateNotFound() throws Exception {
         thrown.expect(NotFoundException.class);
-        thrown.expectMessage("Not found entity with id=" + MEAL1_ID);
+        thrown.expectMessage(String.format("type=DATA_NOT_FOUND, msgCode=exception.common.notFound, args=[id=%s]", MEAL1_ID));
         service.update(MEAL1, ADMIN_ID);
     }
 

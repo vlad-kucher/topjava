@@ -2,6 +2,7 @@ package ru.javawebinar.topjava.web.user;
 
 import org.junit.Test;
 import org.springframework.http.MediaType;
+import org.springframework.test.annotation.Commit;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -88,7 +89,7 @@ public class AdminRestControllerTest extends AbstractControllerTest {
     @Test
 //    https://stackoverflow.com/a/46415060/548473
 //    @Transactional(propagation = Propagation.NEVER)
-//    @Commit
+    @Commit
     public void testUpdate() throws Exception {
         User updated = new User(USER);
         updated.setName("UpdatedName");
