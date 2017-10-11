@@ -9,15 +9,15 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>Calories Management</name>
-    <url>http://topjava.herokuapp.com/</url>
+    <url>http://popjava.herokuapp.com/</url>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <tomcat.version>8.5.21</tomcat.version>
-        <spring.version>4.3.11.RELEASE</spring.version>
+        <tomcat.version>9.0.1</tomcat.version>
+        <spring.version>5.0.0.RELEASE</spring.version>
         <spring-data-jpa.version>1.11.7.RELEASE</spring-data-jpa.version>
         <spring-security.version>4.2.3.RELEASE</spring-security.version>
         <jackson-json.version>2.9.1</jackson-json.version>
@@ -48,7 +48,7 @@
         <webjars-jquery.version>3.2.1</webjars-jquery.version>
         <webjars-datetimepicker.version>2.5.4</webjars-datetimepicker.version>
         <webjars-noty.version>3.1.0</webjars-noty.version>
-        <webjars-datatables.version>1.10.16</webjars-datatables.version>
+        <webjars-datatables.version>1.10.15</webjars-datatables.version>
     </properties>
 
     <build>
